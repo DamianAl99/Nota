@@ -235,7 +235,7 @@ p.through{
 .btn-green{
     background: green;
 }
-
-@media screen and (min-width: 640px){
-
+input{
+    color: orange;
+    border-radius: 9px;
 }
