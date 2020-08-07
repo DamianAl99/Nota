@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+
+body {
+    display: flex;
+    background: #ddd;
+    font-size: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    flex-wrap: wrap;
+  }
+  
+  .pattern {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+      flex: 0 0 auto;
+  }
+  
+  .polka {
+      background:
+          radial-gradient(#140f3f 2px, transparent 3px),
+          radial-gradient(#140f3f 2px, transparent 3px),
+          #fff;
+      background-position: 0 0, 20px 20px;
+      background-size: 40px 40px;
+  }
+  
+  .stripes {
+          background: linear-gradient(-45deg,
+        #655197 25%,
+        #ffffff 25.1%,
+        #ffffff 50%,
+        #655197 50.1%,
+        #655197 75%,
+        #ffffff 75.1%,
+        #ffffff 0);
+          background-size: 40px 40px;
+  }
+  
+  .zig {
+    background:
+      linear-gradient(135deg,
+        #655197 25%,
+        rgba(0,0,0,0) 25.1%),
+      linear-gradient(225deg,
+        #655197 25%,
+        rgba(0,0,0,0) 25.1%),
+      linear-gradient(315deg,
+        #655197 25%,
+        rgba(0,0,0,0) 25.1%),
+      linear-gradient(45deg,
+        #655197 25%,
+        rgba(0,0,0,0) 25.1%),
+      #ffffff;
+    background-size: 40px 40px;
+    background-position: -20px 0, -20px 0, 0 0, 0 0;
+  }
+  
+  .diamond {
+    background-size: 20px 20px;
+    background-position: -20px 0, -20px 0, 0 0, 0 0;
+  }
+  
+  .pat5 {
+    background-image: 
+      linear-gradient(45deg, #655197 50%, transparent 50.1%),
+      linear-gradient(
+      #ffffff,
+      #ffffff 6px,
+      #655197 6px,
+      #655197
+    );
+    background-size: 100%, 100% 12px;
+  }
+
+
+.content-all{
+    background: redd;
+    width: 100%;
+    height: 100%;
+}
+.content-all .content-presentation{
+    background: orangee;
+    width: 90%;
+    margin: auto;
+    height: 100vh;
+    display: grid;
+    align-items: flex-end;
+}
+.content-all .content-presentation .presentation{
+    background: greenn;
+    width: 100%;
+    height: 150px;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 40px 40px;
+    grid-gap: 4px;
+    position: relative;
+}
+.content-all .content-presentation .presentation .title{
+    text-align: left;
+    background: pinkk;
+    display: grid;
+    align-items: flex-end;
+    font-size: 1.8em;
+}
+.content-all .content-presentation .presentation .form{
+    width: 250px;
+    height: 40px;
+    background: redd;
+    margin-bottom: 4px;
+}
+.content-all .content-presentation .presentation .form input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    border-bottom:black 2px solid;
+    font-size: 1.5em;
+}
+.content-all .content-presentation .presentation .btn{
+    width: 150px;
+    height: 40px;
+}
+.content-all .content-presentation .presentation .btn button{
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    background: rgb(15, 9, 37);
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.content-all .content-tasks{
+    width: 100%;
+    height: 100vh;
+    background: pinkk;
+    display: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 1fr;
+}
+.content-all .content-tasks h4{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1/2;
+    align-items: center;
+    font-size: 2em;
+}
+.content-all .content-tasks .background-tasks{
+    background: rgb(12, 7, 39);
+    border-radius: 19px 19px 0 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    color: white;
+}
+.content-all .content-tasks .background-tasks .form-tasks{
+    background: orangee;
+    padding-top: 20px;
+    width: 95%;
+    max-width: 280px;
+    height: 80px;
+    margin: auto;
+}
+.content-all .content-tasks .background-tasks .form-tasks h2{
+    width: 100%;
+    display: block;
+    text-align: left;
+    font-size: 1.6em;
+}
+.content-all .content-tasks .background-tasks .form-tasks input{
+    width: 200px;
+    height: 20px;
+    border: none;
+    border-bottom: 2px solid black;
+    background: transparent;
+    display: inline-block;
+}
+.content-all .content-tasks .background-tasks .form-tasks button{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    text-align: center;
+    border: none;
+    background: rgb(255, 145, 0);
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.content-all .content-tasks .background-tasks .task{
+    background: greenn;
+    padding-top: 20px;
+    width: 95%;
+    max-width: 400px;
+    height: auto;
+    padding-bottom: 20px;
+    margin: auto;
+}
+.content-all .content-tasks .background-tasks .task ul{
+    margin-left: 10px;
+}
+.content-all .content-tasks .background-tasks .task ul li{
+    font-size: 1.1em;
+    width: 100%;
+    max-width: 600px;
+    background: pinkk;
+    display: grid;
+    grid-template-columns: 1fr 50px 55px;
+    margin-bottom: 2px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px 0 10px 0;
+    
+}
+p.through{
+    text-decoration: line-through;
+}
+
+.content-all .content-tasks .background-tasks .task ul li button{
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn-red{
+    background: red;
+}
+.btn-green{
+    background: green;
+}
+
+@media screen and (min-width: 640px){
+
+}
