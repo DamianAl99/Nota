@@ -75,7 +75,7 @@ function through(ii){
     for(let i = 0; i < tasks.length; i++){
         if(tasks[i] == ii){
             //tasks[i].classList.toggle("through");
-            tasks.splice(ii, 1);
+            tasks.splice(i, 1);
         }
     }
     localStorage.setItem("tasks", JSON.stringify(tasks));
