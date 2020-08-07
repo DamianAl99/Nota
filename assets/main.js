@@ -83,6 +83,13 @@ function through(ii){
         
 };
 
+let btnUsuario = document.querySelector("#btn-usuario");
+console.log(btnUsuario);
+btnUsuario.addEventListener("click", function(){
+    localStorage.clear();
+    location.reload();
+})
+
 
 
 
