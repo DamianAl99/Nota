@@ -41,7 +41,7 @@ if(nombreSaved != null){
 let tasks = [];
 formTasks.addEventListener("submit", function(){ 
     if(inputTasks.value == ""){
-        alert("Ingresa una Tarea Valida pelotudo");
+        alert("Ingresa una Tarea Valida :)");
     }else{
         if (localStorage.getItem("tasks")===null){
             tasks.push(inputTasks.value);
