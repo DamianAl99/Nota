@@ -215,6 +215,11 @@ const doItTask = (e, tasks) => {
   }
 }
 
+document.getElementById("btn-usuario").addEventListener("click", () => {
+  localStorage.clear();
+  location.reload();
+})
+
 userExist();
 
 //why we have use the stringIf and parse
