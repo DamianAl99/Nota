@@ -8,8 +8,11 @@
 
     <title>Notas Py</title>
 </head>
-<body>
+<body> 
     <div class="polka pattern">
+    <div class="log">
+        
+    </div>
     <div class="content-all">
         <div class="content-presentation">
             <div class="presentation">
@@ -18,10 +21,10 @@
                 </div>
                 <form id="formNombre">
                     <div class="form">
-                        <input type="text" name="nombre" id="nombre">
+                        <input type="text" name="nombre" id="nombre" placeholder="Ej: Tony Stark">
                     </div>
                     <div class="btn">
-                        <button type="submit" id="btnNombre">Registrar :)</button>
+                        <input type="button" id="btnNombre" value="Registrar"></input>
                     </div>
                 </form>
             </div>
@@ -33,11 +36,24 @@
             <h4 class="titleTasks"></h4>
 
             <div class="background-tasks">
+                <div class="helpInfo">
+                    ? <br>
+                    * Al agregar las tareas, aparecera unos colores. <br>
+                    * El color rojo es para la tarea Urgente. <br>
+                    * El color amarillo es para la tarea NO Urgente.
+                </div>
                 <div class="form-tasks">
                     <h2>Ingresa aqui tus Tareas</h2>
                     <form id="formTasks">
-                        <input type="text" name="task" id="inputTask">
-                        <button type="submit" id="btnSaveTasks">ok</button>
+                        <input type="text" name="task" id="inputTask" placeholder="Ej: Examen de SQL Server">
+                        <div class="btn-save-tasks">
+                            <button type="submit" id="btnSaveTasks">Verificar</button>
+                            <select id="selectRange" required>
+                                <!--El value en los option no se utiliza en el js, se extrae directo Alto o Bajo-->
+                                <option class="alto" value="high">Alto</option>
+                                <option class="bajo" value="low">Bajo</option>
+                            </select>
+                        </div>
                     </form>
                 </div>
     
