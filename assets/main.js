@@ -36,6 +36,7 @@ btnFormTasks.addEventListener("click", (e) => {
   }
   inputTask.focus();
   inputTask.value = "";
+  progressBar();
 });
 
 const nameValidation = () => {
@@ -190,6 +191,7 @@ const deleteTask = (e, tasks) => {
       messageOfLog("Se elimino correctamente la nota", "red");
       console.log("llego aqui");
       writeTasks(tasks);
+      progressBar();
     }
   } catch (error) {
     //console.log("este es un error controlado:", error)
@@ -210,6 +212,7 @@ const doItTask = (e, tasks) => {
     }
     localStorage.setItem("tasks", JSON.stringify(tasks));
     writeTasks(tasks);
+    progressBar();
   } catch (error) {
     //console.log("este es un error controlado: ", error)
   }
@@ -220,7 +223,33 @@ document.getElementById("btn-usuario").addEventListener("click", () => {
   location.reload();
 })
 
+const progressBar = () => {
+  let countTasks = 0;
+  let allTrues;
+  let cont;
+  let barCSS;
+  if(localStorage.getItem("tasks") != null){
+    let tasks = JSON.parse(localStorage.getItem("tasks"));
+    countTasks = tasks.length;
+    countTasks = countTasks * 10;
+
+    allTrues = tasks.filter(task => task.doIt == true);
+    cont = allTrues.length * 10;
+    barCSS = (100*cont)/countTasks;
+    let progressBarHtml = document.querySelector(".progressBar");
+    progressBarHtml.style.width = `${barCSS}%`;
+    if(barCSS <= 40){
+      progressBarHtml.style.background = "yellow";
+    }else if(barCSS <= 85){
+      progressBarHtml.style.background = "orange";
+    }else{
+      progressBarHtml.style.background = "green";
+    }
+  }
+}
+
 userExist();
+progressBar();
 
 //why we have use the stringIf and parse
 //Guardar el nombre en el local storage

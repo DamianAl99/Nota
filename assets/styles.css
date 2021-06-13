@@ -374,3 +374,26 @@ input{
     text-decoration: line-through;
     background: rgba(255, 255, 255, 0.336);
 }
+
+.progressBarContent{
+    width: 95%;
+    height: 10px;
+    margin-left: 2.5%;
+    background: transparent;
+    position: relative;
+}
+.progressBarContent .progressBackground{
+    width: 90%;
+    height: 10px;
+    margin-left: 5%;
+    position: relative;
+    background: rgb(15, 9, 37);
+    border-radius: 2px;
+}
+.progressBarContent .progressBackground .progressBar{
+    width: 10%;
+    height: 10px;
+    position: absolute;
+    background: green;
+    transition: 0.5s all;
+}
